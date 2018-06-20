@@ -17,7 +17,7 @@ type Info struct {
 	Charset   string    `json:"Charset"`
 	Collation string    `json:"Collation"`
 	Hostname  string    `json:"Hostname"`
-	Port      int       `json:"Port"`
+	Port      string    `json:"Port"`
 	Parameter string    `json:"Parameter"`
 	Migration Migration `json:"Migration"`
 }
@@ -98,10 +98,10 @@ func (c Info) dsn(includeDatabase bool) string {
 	}
 
 	// Example: root:password@tcp(localhost:3306)/test
-	s := fmt.Sprintf("%v:%v@tcp(%v:%d)/%v", ci.Username, ci.Password, ci.Hostname, ci.Port, param)
+	s := fmt.Sprintf("%v:%v@tcp(%v:%s)/%v", ci.Username, ci.Password, ci.Hostname, ci.Port, param)
 
 	if includeDatabase {
-		s = fmt.Sprintf("%v:%v@tcp(%v:%d)/%v%v", ci.Username, ci.Password, ci.Hostname, ci.Port, ci.Database, param)
+		s = fmt.Sprintf("%v:%v@tcp(%v:%s)/%v%v", ci.Username, ci.Password, ci.Hostname, ci.Port, ci.Database, param)
 	}
 
 	return s
