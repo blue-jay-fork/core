@@ -23,6 +23,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"path/filepath"
 	"strings"
 	"time"
@@ -243,7 +244,8 @@ func (info *Info) UpOne() error {
 func (info *Info) UpAll() error {
 	// If migration is current
 	if info.Position() >= len(info.List) {
-		return ErrCurrent
+		log.Println(ErrCurrent)
+		return nil
 	}
 
 	// Start at next position
