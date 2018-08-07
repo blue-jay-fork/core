@@ -12,7 +12,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/blue-jay/core/uuid"
+	"github.com/blue-jay-fork/core/uuid"
 )
 
 var (

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/blue-jay/core/asset"
+	"github.com/blue-jay-fork/core/asset"
 )
 
 func init() {

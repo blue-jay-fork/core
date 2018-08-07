@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/blue-jay/core/form"
+	"github.com/blue-jay-fork/core/form"
 )
 
 // TestFormRadio ensures input is parsed correctly.

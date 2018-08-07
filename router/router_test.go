@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/blue-jay/core/router"
+	"github.com/blue-jay-fork/core/router"
 
 	"github.com/husobee/vestigo"
 )

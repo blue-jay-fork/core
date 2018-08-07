@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/blue-jay/core/replace"
+	"github.com/blue-jay-fork/core/replace"
 )
 
 // TestRun ensures replace works properly.

@@ -81,7 +81,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/blue-jay/core/file"
+	"github.com/blue-jay-fork/core/file"
 )
 
 var (

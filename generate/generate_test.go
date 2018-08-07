@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/blue-jay/core/generate"
+	"github.com/blue-jay-fork/core/generate"
 )
 
 func fileAssertSame(t *testing.T, fileActual, fileExpected string) {

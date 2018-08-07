@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/blue-jay/core/env"
+	"github.com/blue-jay-fork/core/env"
 )
 
 // TestEncodedKey ensures the key is random.
