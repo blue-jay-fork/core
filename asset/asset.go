@@ -45,7 +45,12 @@ func (c Info) Map(baseURI string) template.FuncMap {
 			return template.HTML("<!-- CSS Error: " + fpath + " -->")
 		}
 
-		return template.HTML(fmt.Sprintf(`<link media="%v" rel="stylesheet" type="text/css" href="%v" />`, media, path))
+		var crossorigin string
+		if strings.HasPrefix(path, "//") {
+			crossorigin = fmt.Sprintf("crossorigin=\"anonymous\"")
+		}
+
+		return template.HTML(fmt.Sprintf(`<link media="%v" rel="stylesheet" type="text/css" href="%v" %s/>`, media, path, crossorigin))
 	}
 
 	f["IMG"] = func(fpath string, alt string) template.HTML {
